@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+body.dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: 4rem; /* Espacio para el header en pantallas pequeñas */
+  }
+}

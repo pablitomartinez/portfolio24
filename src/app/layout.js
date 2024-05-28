@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import Header from "@/components/Header";
+import Header from "@/components/Header"; // Importa el Header
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,15 +18,12 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <body
-        className={`flex h-screen flex-col lg:flex-row md:overflow-hidden lg:px-24${inter.className}`}
-      >
-        <Header />
-        <div className="w-full lg:w-64">
+        className={` ${inter.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen`}>
+        <Header /> {/* Agrega el Header */}
+        <aside className="bg-gray-800 text-white">
           <Navbar />
-        </div>
-        <div className="flex-grow p-6 lg:overflow-y-auto lg:p-12">
-          {children}
-        </div>
+        </aside>
+        <main className="p-4">{children}</main>
       </body>
     </html>
   );
