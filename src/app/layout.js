@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
+// import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header"; // Importa el Header
 
@@ -14,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <link rel="icon" href="./favicon.ico" />
-      </Head>
+      </Head> */}
       <body
         className={` ${inter.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen`}>
         <Header /> {/* Agrega el Header */}
