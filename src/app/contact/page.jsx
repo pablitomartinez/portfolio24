@@ -91,7 +91,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="h-screen py-20 bg-gray-100 dark:bg-gray-900"
+      className="h-screen w-full py-20 dark:bg-gray-900"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">
