@@ -1,10 +1,14 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+// import { Lora } from "next/font/google";
 import "./globals.css";
 // import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header"; // Importa el Header
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+// const lora = L({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "<pabloMartinez/>",
@@ -18,11 +22,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./favicon.ico" />
       </Head> */}
       <body
-        className={` ${inter.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen`}
-      >
-      
-        
-        <Header /> {/* Agrega el Header */}
+        className={` ${poppins.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen`}
+      > 
+        <Header />
         <aside className="bg-gray-800 text-white">
           <Navbar />
         </aside>

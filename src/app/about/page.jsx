@@ -1,12 +1,13 @@
-import React from "react";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section
       id="about"
-      className=" h-screen py-20 bg-gray-100 dark:bg-gray-900"
+      className=" h-screen py-20 bg-gray-100 dark:bg-gray-900 lg:grid lg:grid-cols-2 justify-center items-center"
     >
-      <div className="container mx-auto px-4 space-y-8">
+      {/* TEXTO  */}
+      <div className=" px-4 space-y-8">
         <h2 className="text-3xl font-bold text-left mb-8 dark:text-white">
           About
         </h2>
@@ -16,6 +17,15 @@ export default function About() {
           do.
         </p>
         <button className="text-center  px-[9px] py-[16px]">HIRE ME</button>
+      </div>
+      {/* IMAGEN */}
+      <div className="flex justify-center" >
+        <Image
+          src="/user.png"
+          width={300}
+          height={300}
+          alt="imagen de perfil"
+        />
       </div>
     </section>
   );
