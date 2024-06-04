@@ -99,3 +99,33 @@ body.dark {
     padding-top: 4rem; /* Espacio para el header en pantallas pequeñas */
   }
 }
+
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-vertical 10s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll-horizontal 10s linear infinite;
+  }
+}

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className=" h-screen py-20 bg-gray-100 dark:bg-gray-900 lg:grid lg:grid-cols-2 justify-center items-center"
+      className=" h-screen bg-gray-100 dark:bg-gray-900 lg:grid lg:grid-cols-2 justify-center items-center"
     >
       {/* TEXTO  */}
       <div className=" px-4 space-y-8">
@@ -19,7 +19,7 @@ export default function About() {
         <button className="text-center  px-[9px] py-[16px]">HIRE ME</button>
       </div>
       {/* IMAGEN */}
-      <div className="flex justify-center" >
+      <div className="flex justify-center">
         <Image
           src="/user.png"
           width={300}
