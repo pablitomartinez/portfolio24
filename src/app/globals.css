@@ -3,45 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #ffffff;
+  --background-color: #FFFFFF;
   --text-color: #000000;
 }
 
 [data-theme="dark"] {
-  --background-color: #333333;
-  --text-color: #ffffff;
+  --background-color: #1F2937;
+  --text-color: #FFFFFF;
 }
 
 .dark {
-  --background-color: #333333;
-  --text-color: #ffffff;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
+  --background-color: #1F2937;
+  --text-color: #FFFFFF;
 }
 
 body {
-  /* min-height: 100vh; */
-  background: #0c192c;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
 
 .container {
   position: relative;
-  /* width: 100%;
-  height: 100vh; */
-  /* overflow: hidden; */
 }
 
-.bubbles{
+.bubbles {
   position: relative;
   display: flex;
-   justify-content: space-between;
+  justify-content: space-between;
 }
 
 .bubbles span {
@@ -56,16 +48,14 @@ body {
   0 0 100px #4fc3dc;
   animation: animate 25s linear infinite;
   animation-duration: calc(1000s / var(--i));
-
 }
 
-.bubbles span:nth-child(even){
-  background: #ff2d75;
-  box-shadow: 0 0 0 10px #ff2d7544,
-  0 0 50px #ff2d75,
-  0 0 100px #ff2d75;
+.bubbles span:nth-child(even) {
+  background: #FB7185;
+  box-shadow: 0 0 0 10px #FB718544,
+  0 0 50px #FB7185,
+  0 0 100px #FB7185;
 }
-
 
 @keyframes animate {
   0% {
@@ -77,11 +67,7 @@ body {
   100% {
     transform: translateY(100vh) scale(0);
   }
-  
 }
-
-
-
 
 body.dark {
   background-color: var(--background-color);
@@ -96,10 +82,9 @@ body.dark {
 
 @media (max-width: 1024px) {
   body {
-    padding-top: 4rem; /* Espacio para el header en pantallas pequeñas */
+    padding-top: 4rem;
   }
 }
-
 
 @keyframes scroll-vertical {
   0% {
@@ -109,7 +94,6 @@ body.dark {
     transform: translateY(-100%);
   }
 }
-
 
 @keyframes scroll-horizontal {
   0% {

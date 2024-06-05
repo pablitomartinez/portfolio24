@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -18,15 +18,15 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 z-50 lg:px-24">
+    <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-4 bg-lightBackground dark:bg-darkBackground z-50 lg:px-24">
       <Link href="/">
-        <p className="text-lg font-bold dark:text-white">
+        <p className="text-lg font-bold text-primary dark:text-primaryDark">
           <span>{"<pabloMartinez />"}</span>
         </p>
       </Link>
       <button
         onClick={toggleDarkMode}
-        className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700"
+        className="flex items-center justify-center w-10 h-10 rounded-full bg-secondaryLight dark:bg-secondaryDark text-lightText dark:text-darkText"
       >
         {darkMode ? (
           <svg
@@ -67,3 +67,73 @@ const Header = () => {
 };
 
 export default Header;
+
+// 'use client';
+// import { useState, useEffect } from "react";
+// import Link from "next/link";
+
+// const Header = () => {
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   useEffect(() => {
+//     if (darkMode) {
+//       document.documentElement.classList.add("dark");
+//     } else {
+//       document.documentElement.classList.remove("dark");
+//     }
+//   }, [darkMode]);
+
+//   const toggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+
+//   return (
+//     <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-4 bg-gray-200 dark:bg-gray-800 z-50 lg:px-24">
+//       <Link href="/">
+//         <p className="text-lg font-bold dark:text-white">
+//           <span>{"<pabloMartinez />"}</span>
+//         </p>
+//       </Link>
+//       <button
+//         onClick={toggleDarkMode}
+//         className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700"
+//       >
+//         {darkMode ? (
+//           <svg
+//             data-slot="icon"
+//             fill="none"
+//             strokeWidth="1.5"
+//             stroke="currentColor"
+//             viewBox="0 0 24 24"
+//             xmlns="http://www.w3.org/2000/svg"
+//             aria-hidden="true"
+//           >
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+//             ></path>
+//           </svg>
+//         ) : (
+//           <svg
+//             data-slot="icon"
+//             fill="none"
+//             strokeWidth="1.5"
+//             stroke="currentColor"
+//             viewBox="0 0 24 24"
+//             xmlns="http://www.w3.org/2000/svg"
+//             aria-hidden="true"
+//           >
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+//             ></path>
+//           </svg>
+//         )}
+//       </button>
+//     </header>
+//   );
+// };
+
+// export default Header;
