@@ -31,6 +31,10 @@ module.exports = {
         lightText: "#000000",
         darkText: "#FFFFFF",
       },
+      backgroundImage: {
+        "light-gradient":"linear-gradient(to right, #89CFF0, #A9DFBF, #FFFACD)",
+        "dark-gradient": "linear-gradient(to right, #0F2027, #203A43, #2C5364)",
+      },
     },
   },
   darkMode: "class",

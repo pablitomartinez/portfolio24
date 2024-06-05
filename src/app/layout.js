@@ -17,15 +17,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-light-gradient dark:bg-dark-gradient">
       {/* <Head>
         <link rel="icon" href="./favicon.ico" />
       </Head> */}
       <body
-        className={` ${poppins.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen`}
-      > 
+        className={` ${poppins.className} pt-16 md:pt-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[auto,1fr] lg:min-h-screen bg-light-gradient dark:bg-dark-gradient`}
+      >
         <Header />
-        <aside className="bg-gray-800 text-white">
+        <aside className="text-white">
           <Navbar />
         </aside>
         <main className="p-4 flex justify-center items-center">{children}</main>
